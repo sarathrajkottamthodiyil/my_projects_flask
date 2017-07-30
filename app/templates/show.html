@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+		<body>
+			<h1>MEMBER DETAILS</h1>
+			<table border = 1>
+        		<thead>
+           			 <td>id</td>
+          			 <td>name</td>
+           			 <td>topic</td>
+           			 <td>description</td>
+       		  	</thead>
+         
+         
+         		{% for row in rows %}
+            		<tr>
+              		 <td>{{row[0]}}</td>
+              		 <td>{{row[1]}}</td>
+              		 <td> {{ row[2]}}</td>	
+              		 <td>{{row[3]}}
+           			</tr>
+         		{% endfor %}
+     		</table>
+     
+
+
+
+			<a href = "{{ url_for('show_details') }}">  show</a>
+
+
+
+
+		</body>
+</html>
